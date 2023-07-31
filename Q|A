@@ -1,0 +1,25 @@
+Q: Write a Python function that takes two lists and returns True if they have at least one common member.
+A:
+def list(l1,l2):
+    x=len(l1)
+    y=len(l2)
+    result=False
+    for i in range(0,x):
+        for j in range(0,y):
+            if l1[i]==l2[j]:
+                result = True
+            return result
+def main():
+    a=[2,4,5,6,7]
+    b=[0]
+    print(list(a,b))
+if __name__ == "__main__":
+    main()
+Q: Write a Python program to print nested lists (each list on a new line) using the print() function.
+A:
+def p(x):
+    s=[str(y) for y in x] #converting the nested list into string
+    r='\n'.join(s) #joining the strings with new line so that result will be printed in new line
+    return r
+l=[[2],[3],[4],5]
+print(p(l))
