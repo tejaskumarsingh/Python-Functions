@@ -1,0 +1,65 @@
+Q: Write a Python program to sum all the items in a list.
+A:
+def sum(x):
+    a=len(x)
+    sum=0
+    for i in range(0,a):
+        sum=sum+x[i]
+    return sum
+y=[1,2,3,4,5]
+print(sum(y))
+Q: Write a Python program to multiply all the items in a list.
+A:
+def mul(x):
+    a=len(x)
+    m=1
+    for i in range(0,a):
+        m=m*x[i]
+    return m
+y=[1,2,3,4,5]
+print(mul(y))
+Q: Write a Python program to get the largest number from a list.
+A:
+def largest(x):
+    a=len(x)
+    l=0
+    for i in range(0,a):
+        if x[i]>=l:
+            l=x[i]
+    return l
+y=[1,2,9,6,3,2]
+print(largest(y))
+Q: Write a Python program to get the smallest number from a list.
+A:
+def smallest(y):
+    length=len(y)
+    s=y[0]
+    for i in range(0,length):
+        if y[i]<s:
+            s=y[i]
+    return s
+x=[1,2,4,4,2,0]
+print(smallest(x))
+Q: Write a Python program to count the number of strings from a given list of strings. The string length is 2 or more and the first and last characters are the same.
+Sample List : ['abc', 'xyz', 'aba', '1221']
+Expected Result : 2
+A:
+def s(a):
+    count=0
+    for x in a:
+        if len(x) > 1 and x[0] == x[-1]:
+            count += 1
+    return count
+b=['abc', 'xyz', 'aba', '1221']
+print(s(b))
+Q: Write a Python program to get a list, sorted in increasing order by the last element in each tuple from a given list of non-empty tuples.
+Sample List : [(2, 5), (1, 2), (4, 4), (2, 3), (2, 1)]
+Expected Result : [(2, 1), (1, 2), (2, 3), (4, 4), (2, 5)]
+A:
+def last(n):
+    return n[-1]
+
+def sort_list_last(tuples):
+  return sorted(tuples, key=last)
+
+print(sort_list_last([(2, 5), (1, 2), (4, 4), (2, 3), (2, 1)]))
